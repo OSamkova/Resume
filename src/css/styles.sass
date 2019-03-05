@@ -28,6 +28,12 @@ h4
 .icon-phone-solid
 	background-image: url(../img/phone-solid.svg)
 
+.cursive
+	font:
+		family: 'Roboto', sans-serif
+		weight 	: 100
+		style 	: italic
+
 .resume-container
 	min-height: 100vh
 	padding-left : 40px
@@ -38,6 +44,9 @@ h4
 	    size 	: 16px
 	    color 	: $BLACK
 
+	p
+		line-height : 20px
+
 	.resume-header
 		text-transform 	: uppercase
 		text-align 		: center
@@ -45,7 +54,16 @@ h4
 
 	.resume
 		display 		: flex
+		flex-wrap 		: wrap
 		flex-direction 	: row
+
+		.right-col
+			padding : 15px
+			flex : 1 30%
+
+		.left-col
+			padding : 15px
+			flex : 2 60%
 
 	.contacts-table
 
@@ -61,6 +79,36 @@ h4
 				padding 		: 0 10px
 				line-height 	: 36px
 				display 		: inline-block
+
+	.experience-container
+		.experience-title
+			display : flex
+			justify-content : space-between
+			padding-bottom : 4px
+
+			.position
+				color : $TEAL
+				font:
+					size : 14px
+					weight : 600
+
+		.experience-item
+			padding : 10px 0
+
+			.description
+				padding-top: 8px
+
+		.company-name
+			font:
+				weight 	: 600
+				size 	: 14px
+			color 	: $BLACK
+
+		.date-place
+			font:
+				weight  : 100px
+				style 	: italic
+				size 	: 12px
 
 
 
