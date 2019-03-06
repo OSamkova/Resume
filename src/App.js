@@ -1,4 +1,14 @@
 import React, { Component } from 'react';
+import { TEAL } from './lib/colors';
+
+import BarChart from './components/BarChart';
+
+const barInputData = [
+            { letter: "Superman", frequency: 50 },
+            { letter: "Batman", frequency: 30 },
+            { letter: "Flash", frequency: 15 },
+            { letter: "Aquaman", frequency: 5 }
+        ];
 
 class App extends Component {
     render() {
@@ -48,8 +58,9 @@ class App extends Component {
                             <h4>About</h4>
                             <p>
                                 Front-end engineer with a passion for problem solving. 
-                                Inventive, curious and self-taught I find the javascript ecosystem to be the perfect playground. 
-                                Looking for a team to push my skills into the next level.
+                                Inventive, curious and self-taught, 
+                                I find the javascript ecosystem to be the perfect playground. 
+                                Looking for a team that will push my skills to the next level.
                             </p>
                         </div>
 
@@ -65,9 +76,13 @@ class App extends Component {
                                     <span className='date-place'>New York, NY</span>
                                 </div>
                                 <div className='description'>
-                                    Collaborated on the front-end of our underwriting AI technology that helped to process over 2 billion in loans. 
+                                    Collaborated on the front-end of our underwriting AI technology that has processed over 2 billion in loans. 
+                                    Developed custom features/components to optimize user experience. 
+                                    Handled state management and the implementation of unit tests.
+
+                                    {/*Collaborated on the front-end of our underwriting AI technology that helped to process over 2 billion in loans. 
                                     My focus was on optimizing the user experience, developing custom features/components, state management and 
-                                    implementing unit tests using Jest and Enzyme.
+                                    implementing unit tests using Jest and Enzyme.*/}
                                     <p className='cursive'>Technologies used: React/Redux, Jest/Enzyme</p>
                                 </div>
                             </div>
@@ -82,10 +97,9 @@ class App extends Component {
                                 </div>
                                 <div className='description'>
                                     Maintained in-house software written in ReactJS. 
-                                    Wrote custom plugins for Salesforce to enhance user interaction.
+                                    Developed an automated loan approval application that resulted in corporate cost savings and cutting the loan approval process from one year to several weeks. 
+                                    Wrote custom plugins for Salesforce to enhance user interaction. 
                                     Collaborated with end users to make the product more responsive to their needs.
-                                    Developed automated loan approval application, creating cost savings and
-                                    cutting loan approval process from one year to several weeks.
                                     <p className='cursive'>Technologies used: JavaScript, React/Redux, Apex, SOQL</p>
                                 </div>
                             </div>
@@ -99,10 +113,10 @@ class App extends Component {
                                     <span className='date-place'>New York, NY</span>
                                 </div>
                                 <div className='description'>
-                                    Served as a lead quality assurance engineer for an in-house team developing due diligence app for a major commercial mortgage lender. 
-                                    Defined and implemented an automated test suite from the scratch which greatly improved robustness and reliability of the app. 
+                                    Served as the lead quality assurance engineer for an in-house team developing a due diligence app for a large commercial mortgage lender. 
+                                    Defined and implemented an automated test suite from scratch, 
+                                    which greatly improved the robustness and reliability of the app. 
                                     Supervised and mentored junior team members.
-
                                     <p className='cursive'>Technologies used: GhostInspector, Selenium, NightwatchJS/Browserstack</p>
                                 </div>
                             </div>
@@ -112,6 +126,15 @@ class App extends Component {
                     <div className='right-col'>
                         <div className='skills-container'>
                             <h4>Skills</h4>
+                            <BarChart 
+                                inputData={barInputData}
+                                getX={item => item.letter}
+                                getY={item => item.frequency}
+                                width={300}
+                                height={300}
+                                radius={12}
+                                color={TEAL}
+                            />
                         </div>
                         <div className='education-container'>
                             <h4>Education</h4>
