@@ -4,6 +4,7 @@
   "private": true,
   "homepage": "https://osamkova.github.io/resume",
   "dependencies": {
+    "d3": "^5.9.1",
     "gh-pages": "^2.0.1",
     "node-sass": "^4.11.0",
     "react": "^16.8.3",

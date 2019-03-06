@@ -65,8 +65,8 @@ class App extends Component {
                                     <span className='date-place'>New York, NY</span>
                                 </div>
                                 <div className='description'>
-                                    Collaborated on the front-end of our Underwriting AI technology that helped process over 2 billions in loans. 
-                                    My focus was on optimizing the user experience, developing custom features/components and state management and 
+                                    Collaborated on the front-end of our underwriting AI technology that helped to process over 2 billion in loans. 
+                                    My focus was on optimizing the user experience, developing custom features/components, state management and 
                                     implementing unit tests using Jest and Enzyme.
                                     <p className='cursive'>Technologies used: React/Redux, Jest/Enzyme</p>
                                 </div>
@@ -81,9 +81,11 @@ class App extends Component {
                                     <span className='date-place'>New York, NY</span>
                                 </div>
                                 <div className='description'>
-                                    Maintaned in-house software written in ReactJS. 
-                                    Architected single page applications within Salesforce ecosystem.
-
+                                    Maintained in-house software written in ReactJS. 
+                                    Wrote custom plugins for Salesforce to enhance user interaction.
+                                    Collaborated with end users to make the product more responsive to their needs.
+                                    Developed automated loan approval application, creating cost savings and
+                                    cutting loan approval process from one year to several weeks.
                                     <p className='cursive'>Technologies used: JavaScript, React/Redux, Apex, SOQL</p>
                                 </div>
                             </div>
@@ -98,8 +100,8 @@ class App extends Component {
                                 </div>
                                 <div className='description'>
                                     Served as a lead quality assurance engineer for an in-house team developing due diligence app for a major commercial mortgage lender. 
-                                    I defined and implemented an automated test suite from the scratch which greatly improved robustness and reliability of the app. 
-                                    I also supervised and mentored junior team members.
+                                    Defined and implemented an automated test suite from the scratch which greatly improved robustness and reliability of the app. 
+                                    Supervised and mentored junior team members.
 
                                     <p className='cursive'>Technologies used: GhostInspector, Selenium, NightwatchJS/Browserstack</p>
                                 </div>
