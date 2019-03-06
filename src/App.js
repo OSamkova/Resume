@@ -4,7 +4,7 @@ class App extends Component {
     render() {
         return (
             <div className='resume-container'>
-                <div className='resume'>
+                <div className='resume-header-wrap'>
                     <div className='left-col'>
                         <h1 className='resume-header'>
                             Oksana Samkova-Plattner
@@ -35,6 +35,15 @@ class App extends Component {
                                 <span className='contacts-cell-item'>https://github.com/osamkova</span>
                             </div>
                         </div>
+                    </div>
+                    <div className='right-col'>
+                        <div className='photo-wrap'>
+                            <img src='https://s3.us-east-2.amazonaws.com/oksanas-misc-photos/IMG_4183.jpg' alt='headshot' height="100" width="100"/>
+                        </div>
+                    </div>
+                </div>
+                <div className='resume'>
+                    <div className='left-col'>                        
                         <div className='about-container'>
                             <h4>About</h4>
                             <p>
@@ -48,11 +57,11 @@ class App extends Component {
                             <h4>Experience</h4>
                             <div className='experience-item'>
                                 <div className='experience-title'>
-                                    <span className='company-name '>Greystone & Co</span>
+                                    <span className='company-name'>Greystone & Co</span>
                                     <span className='date-place'>Jul 2017 - Present</span>
                                 </div>
                                 <div className='experience-title'>
-                                    <span >Software Engineer</span>
+                                    <span className='position'>Software Engineer</span>
                                     <span className='date-place'>New York, NY</span>
                                 </div>
                                 <div className='description'>
@@ -64,7 +73,7 @@ class App extends Component {
                             </div>
                             <div className='experience-item'>
                                 <div className='experience-title'>
-                                    <span className='company-name '>Greystone & Co</span>
+                                    <span className='company-name'>Greystone & Co</span>
                                     <span className='date-place'>Jan 2016 - Jul 2017</span>
                                 </div>
                                 <div className='experience-title'>
@@ -80,7 +89,7 @@ class App extends Component {
                             </div>
                             <div className='experience-item'>
                                 <div className='experience-title'>
-                                    <span className='company-name '>Greystone & Co</span>
+                                    <span className='company-name'>Greystone & Co</span>
                                     <span className='date-place'>Aug 2013 - Jan 2016</span>
                                 </div>
                                 <div className='experience-title'>
@@ -99,9 +108,6 @@ class App extends Component {
                         
                     </div>
                     <div className='right-col'>
-                        <div className='photo-wrap'>
-                            <img src='https://s3.us-east-2.amazonaws.com/oksanas-misc-photos/IMG_4183.jpg' height="100" width="100"/>
-                        </div>
                         <div className='skills-container'>
                             <h4>Skills</h4>
                         </div>
