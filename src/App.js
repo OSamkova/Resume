@@ -4,10 +4,15 @@ import { TEAL } from './lib/colors';
 import BarChart from './components/BarChart';
 
 const barInputData = [
-            { letter: "Superman", frequency: 50 },
-            { letter: "Batman", frequency: 30 },
-            { letter: "Flash", frequency: 15 },
-            { letter: "Aquaman", frequency: 5 }
+            { label: "JavaScript (ES6/ES7)", points: 50 },
+            { label: "HTML5 / CSS3 / Sass / Bootstrap", points: 50 },
+            { label: "React / Redux", points: 45 },
+            { label: "Jest / Enzyme", points: 45 },
+            { label: "Photoshop", points: 45 },
+            { label: "D3", points: 40 },
+            { label: "SQL", points: 40 },
+            { label: "Node.js / Express", points: 30 },
+            { label: "MongoDB / Mongoose", points: 25 },
         ];
 
 class App extends Component {
@@ -128,11 +133,11 @@ class App extends Component {
                             <h4>Skills</h4>
                             <BarChart 
                                 inputData={barInputData}
-                                getX={item => item.letter}
-                                getY={item => item.frequency}
+                                getX={item => item.points}
+                                getY={item => item.label}
                                 width={300}
-                                height={300}
-                                radius={12}
+                                height={barInputData.length * 36}
+                                radius={6}
                                 color={TEAL}
                             />
                         </div>

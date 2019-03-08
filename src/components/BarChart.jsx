@@ -3,64 +3,80 @@ import React from 'react';
 import { scaleBand, scaleLinear } from "d3-scale";
 import { select } from "d3-selection";
 import { max } from "d3-array";
-import { axisBottom, axisLeft } from "d3-axis";
+import { axisBottom } from "d3-axis";
 
-import { GREY } from '../lib/colors';
+import { GREY, WHITE} from '../lib/colors';
 
-// class SingleBar extends React.Component {
+// class Bar extends React.Component {
 
-//     constructor(props) {
-//         super(props);
-//         this.state = {hover : false}
-//     }
+// 	render() {
+// 		 var style =  {fill: GREY};
 
-//     render() {
-//     	return (
-//     		<g>
-//     		</g>
-//     	)
-//     }
-// }
+// 		return (
+// 			<rect
+// 				className={this.props.focused ? 'focused' : ''}
+// 				width={this.props.width} height={this.props.height}
+// 				y={this.props.offset} x={this.props.x}
+// 				onMouseOver={this.props.over}
+// 				onMouseOut={this.props.out}
+// 				style={style}
+// 			/>
+// 		);
+// 	}
+// };
 
 class BarChart extends React.Component {
 
     render() {
-    	const margin = { top: 20, right: 20, bottom: 30, left: 40 };
+    	const margin = { top: 0, right: 20, bottom: 30, left: 10 };
     	const { inputData, width, height, getX, getY, color, radius } = this.props;
 
 		// Make sure w and h would be larger than or equal to 0
 		const w = Math.max(0, width - margin.left - margin.right);
 		const h = Math.max(0, height - margin.top - margin.bottom);
 
-		const x = scaleBand()
-			.rangeRound([0, w])
+		const x = scaleLinear().rangeRound([0, w]);
+		const y = scaleBand()
+			.rangeRound([0, h])
 			.padding(0.4);
 
-		const y = scaleLinear().rangeRound([h, 0]);
+		// const maxWidth = max(inputData, getX);			
+		
+		x.domain([0, max(inputData, getX)]);
+		y.domain(inputData.map(getY));
 
-		x.domain(inputData.map(getX));
-		y.domain([0, max(inputData, getY)]);
-
-		const axisX = axisBottom(x);
-		const axisY = axisLeft(y).ticks(4);
+		const axisX = axisBottom(x).ticks(0);
+			//.tickFormat((d) => d === 0 ? 'Knowledgeable' : d === maxWidth ? 'Advanced' : '');
 
     	return ( <svg className='bar-chart' width={width} height={height}>
     				<g transform={`translate(${margin.left}, ${margin.top})`}>
 						{inputData.map((item, i) => {
-							const bw = x.bandwidth();
-							const bh = h - y(getY(item));
+							const bw = x(getX(item));
+							const bh = y.bandwidth();
+
 							return (
-								<path
-									d={`M${x(getX(item))},${h}
-									v${-bh + radius}
-									a${radius},${radius} 0 0 1 ${radius},${-radius}
-									h${bw - 2 * radius}
-									a${radius},${radius} 0 0 1 ${radius},${radius}
-									v${bh - radius}Z`}
-									key={`${i}`}
-								/>
+								<g key={`${i}`}>
+									<path
+										d={`M0,${y(getY(item))}
+											h${bw - radius}
+											a${radius},${radius} 0 0 1 ${radius},${radius}
+											v${bh - radius}
+											a${radius},${radius} 0 0 1 ${-radius},${radius}
+											h${-bw + radius}Z
+										`}
+										fill={`${color}`}
+									/>
+									<text 
+										x 	= {radius} 
+										y 	= {y(getY(item)) + 2.5 * radius} 
+										fill= {WHITE}
+										fontSize = "12px"
+										>{item.label}
+									</text>
+								</g>
 							);
 						})}
+
 						<g
 							className="axis axis-x"
 							transform={`translate(0, ${h})`}
@@ -68,19 +84,25 @@ class BarChart extends React.Component {
 								const axis = select(node).call(axisX);
 								axis.selectAll(".tick line").remove();
 							}}
-						/>
-						<g className="axis" ref={node => select(node).call(axisY)} />
+						>
+							<text 
+								x 	= {41} 
+								y 	= {18} 
+								fill= {GREY}
+								>Knowledgeable
+							</text>
+							<text 
+								x 	= {w - 26} 
+								y 	= {18} 
+								fill= {GREY}
+								>Advanced
+							</text>
+						</g>
 					</g>
 	    			<style>{`
-				        path {
-				          fill: ${color || GREY};
-				        }
 				        .axis {
 				          color: ${GREY};
-				          font-size: 0.8rem;
-				        }
-				        .axis-x {
-				          font-size: calc(0.7rem + 0.2vw);
+				          font-size: 12px;
 				        }
 				      `}</style>
 	    		 </svg> );
