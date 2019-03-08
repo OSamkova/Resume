@@ -72,6 +72,7 @@ h4
 		flex-direction 	: row
 
 	.right-col
+		max-width : 300px
 		padding : 15px
 		flex : 1 30%
 
@@ -123,10 +124,16 @@ h4
 			color 	: $BLACK
 
 		.date-place
+			white-space: nowrap
 			font:
 				weight  : 100px
 				style 	: italic
 				size 	: 12px
+
+			&.bottom-aligned
+				line-height : 36px
+				display : inline-block
+
 
 
 

@@ -141,8 +141,18 @@ class App extends Component {
                                 color={TEAL}
                             />
                         </div>
-                        <div className='education-container'>
+                        <div className='experience-container'>
                             <h4>Education</h4>
+                            <div className='experience-item'>
+                                <div className='experience-title'>
+                                    <span className='company-name'>Samara State University</span>
+                                    <span className='date-place'>2008</span>
+                                </div>
+                                <div className='experience-title'>
+                                    <span className='description'>MS in Mechanical Engineering</span>
+                                    <span className='date-place bottom-aligned'>Samara, Russia</span>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
