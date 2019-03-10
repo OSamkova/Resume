@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { TEAL } from './lib/colors';
 
 import BarChart from './components/BarChart';
+import { exportPDF } from './lib/export';
 
 const barInputData = [
             { label: "JavaScript (ES6/ES7)", points: 50 },
@@ -51,9 +52,15 @@ class App extends Component {
                             </div>
                         </div>
                     </div>
-                    <div className='right-col'>
+                    <div className='right-col flex'>
                         <div className='photo-wrap'>
                             <img src='https://s3.us-east-2.amazonaws.com/oksanas-misc-photos/IMG_4183.jpg' alt='headshot' height="100" width="100"/>
+                        </div>
+                        <div
+                            className='icon-wrap'
+                            onClick={() => exportPDF()}
+                        >
+                            <span className='icon icon-arrow-circle-down-solid'/>
                         </div>
                     </div>
                 </div>
