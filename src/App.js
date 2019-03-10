@@ -9,7 +9,7 @@ const barInputData = [
             { label: "HTML5 / CSS3 / Sass / Bootstrap", points: 50 },
             { label: "React / Redux", points: 45 },
             { label: "Jest / Enzyme", points: 45 },
-            { label: "Photoshop", points: 45 },
+            { label: "Photoshop / Illustrator", points: 45 },
             { label: "D3", points: 40 },
             { label: "SQL", points: 40 },
             { label: "Node.js / Express", points: 30 },

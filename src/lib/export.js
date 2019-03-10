@@ -272,14 +272,14 @@ export const exportPDF = () => {
 				color: '#007373'
 			},
 			firstLine: {
-				margin: [0, 8, 0, 4]
+				margin: [0, 12, 0, 4]
 			},
 			secondLine: {
-				margin: [0, 0, 0, 8]
+				margin: [0, 0, 0, 10]
 			}
 		}
 	};
 	
-	pdfMake.createPdf(docDefinition).open();
-	// pdfMake.createPdf(docDefinition).download('Oksana Samkova Resume.pdf');
+	// pdfMake.createPdf(docDefinition).open();
+	pdfMake.createPdf(docDefinition).download('Oksana Samkova Resume.pdf');
 }
