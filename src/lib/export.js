@@ -37,18 +37,19 @@ export const exportPDF = () => {
 										margin: [8, 0, 0, 0]
 									}
 								],
-								margin: [0, 20, 0, 12]
+								margin: [0, 20, 0, 10]
 							},
 							{
 								columns: [
 									{
 										image: 'envelope',
-										width: 15
+										width: 15,
+										margin: [0, 2, 0, 0]
 									},
 									{
 										text: 'oksasamkova@gmail.com',
 										width: 140,
-										margin: [8, 0, 0, 0]
+										margin: [8, 2, 0, 0]
 									},
 									{
 										image: 'gitHub',
@@ -57,7 +58,7 @@ export const exportPDF = () => {
 									},
 									{
 										text: 'https://github.com/osamkova',
-										margin: [8, 0, 0, 0]
+										margin: [8, 2, 0, 0]
 									}
 								],
 							}
@@ -280,6 +281,6 @@ export const exportPDF = () => {
 		}
 	};
 	
-	// pdfMake.createPdf(docDefinition).open();
-	pdfMake.createPdf(docDefinition).download('Oksana Samkova Resume.pdf');
+	pdfMake.createPdf(docDefinition).open();
+	// pdfMake.createPdf(docDefinition).download('Oksana Samkova Resume.pdf');
 }
