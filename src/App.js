@@ -6,9 +6,9 @@ import { exportPDF } from './lib/export';
 
 const barInputData = [
             { label: "JavaScript (ES6/ES7)", points: 50 },
+            { label: "React / Redux", points: 50 },
+            { label: "Jest / Enzyme", points: 50 },
             { label: "HTML5 / CSS3 / Sass / Bootstrap", points: 50 },
-            { label: "React / Redux", points: 45 },
-            { label: "Jest / Enzyme", points: 45 },
             { label: "Photoshop / Illustrator", points: 45 },
             { label: "D3", points: 40 },
             { label: "SQL", points: 40 },
