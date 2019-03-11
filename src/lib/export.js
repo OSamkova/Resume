@@ -373,6 +373,6 @@ export const exportPDF = () => {
 		}
 	};
 	
-	pdfMake.createPdf(docDefinition).open();
-	// pdfMake.createPdf(docDefinition).download('Oksana Samkova Resume.pdf');
+	// pdfMake.createPdf(docDefinition).open();
+	pdfMake.createPdf(docDefinition).download('Oksana Samkova Resume.pdf');
 }
