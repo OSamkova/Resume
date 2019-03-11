@@ -7,23 +7,45 @@ import { axisBottom } from "d3-axis";
 
 import { GREY, WHITE} from '../lib/colors';
 
-// class Bar extends React.Component {
+class Bar extends React.Component {
+	constructor(props) {
+        super(props);
+        this.state = {
+        	hover: false
+        }
+    }
 
-// 	render() {
-// 		 var style =  {fill: GREY};
+	render() {
+		const { radius, y, bw, bh, color, label} = this.props;
 
-// 		return (
-// 			<rect
-// 				className={this.props.focused ? 'focused' : ''}
-// 				width={this.props.width} height={this.props.height}
-// 				y={this.props.offset} x={this.props.x}
-// 				onMouseOver={this.props.over}
-// 				onMouseOut={this.props.out}
-// 				style={style}
-// 			/>
-// 		);
-// 	}
-// };
+		return (
+			<g
+				// onMouseEnter = { (e) => { this.setState({hover: true}) } }
+    //             onMouseLeave = { (e) => { this.setState({hover: false}) } }
+			>
+				<path
+					d={`M0,${y}
+						h${bw - radius}
+						a${radius},${radius} 0 0 1 ${radius},${radius}
+						v${bh - radius}
+						a${radius},${radius} 0 0 1 ${-radius},${radius}
+						h${-bw + radius}Z
+					`}
+					fill 		 = { `${color}` }
+					style        = { { transition: 'all 0.2s linear' }} 
+                    
+				/>
+				<text 
+					x 		= {radius} 
+					y 		= {y + 2.5 * radius} 
+					fill 	= {WHITE}
+					fontSize = "12px"
+					>{label}
+				</text>
+			</g>
+		);
+	}
+};
 
 class BarChart extends React.Component {
 
@@ -54,27 +76,15 @@ class BarChart extends React.Component {
 							const bw = x(getX(item));
 							const bh = y.bandwidth();
 
-							return (
-								<g key={`${i}`}>
-									<path
-										d={`M0,${y(getY(item))}
-											h${bw - radius}
-											a${radius},${radius} 0 0 1 ${radius},${radius}
-											v${bh - radius}
-											a${radius},${radius} 0 0 1 ${-radius},${radius}
-											h${-bw + radius}Z
-										`}
-										fill={`${color}`}
-									/>
-									<text 
-										x 	= {radius} 
-										y 	= {y(getY(item)) + 2.5 * radius} 
-										fill= {WHITE}
-										fontSize = "12px"
-										>{item.label}
-									</text>
-								</g>
-							);
+							return <Bar
+								key 	= {`${i}`}
+								radius 	= {radius}
+								y 		= {y(getY(item))}
+								bw 		= {bw}
+								bh 		= {bh}
+								color 	= {color}
+								label 	= {item.label}
+							/>
 						})}
 
 						<g

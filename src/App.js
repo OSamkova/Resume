@@ -57,7 +57,7 @@ class App extends Component {
                             <img src='https://s3.us-east-2.amazonaws.com/oksanas-misc-photos/IMG_4183.jpg' alt='headshot' height="100" width="100"/>
                         </div>
                         <div
-                            className='icon-wrap'
+                            className='icon-wrap link'
                             onClick={() => exportPDF()}
                         >
                             <span className='icon icon-arrow-circle-down-solid'/>
