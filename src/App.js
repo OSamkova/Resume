@@ -32,24 +32,24 @@ class App extends Component {
                                 </div>
                                 <span className='contacts-cell-item'>Queens, NY</span>
                             </div>
-                            <div className='contacts-row'>
+                            <a className='contacts-row link' href="facetime:13475175844">
                                 <div className='icon-wrap'>
                                     <span className='icon icon-phone-solid'/>
                                 </div>
                                 <span className='contacts-cell-item'>(347) 517-5844</span>
-                            </div>
-                            <div className='contacts-row'>
+                            </a>
+                            <a className='contacts-row link' href='mailto:oksasamkova@gmail.com'>
                                 <div className='icon-wrap'>
                                     <span className='icon icon-envelope-solid'/>
                                 </div>
-                                <span className='contacts-cell-item'>oksasamkova@gmail.com</span>
-                            </div>
-                            <div className='contacts-row'>
+                                <span className='contacts-cell-item' >oksasamkova@gmail.com</span>
+                            </a>
+                            <a className='contacts-row link' href='https://github.com/osamkova'>
                                 <div className='icon-wrap'>
                                     <span className='icon icon-github-brands'/>
                                 </div>
                                 <span className='contacts-cell-item'>https://github.com/osamkova</span>
-                            </div>
+                            </a>
                         </div>
                     </div>
                     <div className='right-col flex'>
