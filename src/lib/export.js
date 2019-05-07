@@ -62,7 +62,7 @@ export const exportPDF = () => {
 		});
 		skillsText.push({
 			text: item.label,
-			absolutePosition: { x: 360, y: y(getY(item)) + 181 },
+			absolutePosition: { x: 360, y: y(getY(item)) + 205 },
 			color: '#FFFFFF',
 			fontSize: 7
 		})
@@ -79,14 +79,14 @@ export const exportPDF = () => {
 
 	skillsText.push({
 		text: 'Knowledgeable',
-		absolutePosition: { x: 355, y: 368 },
+		absolutePosition: { x: 355, y: 392 },
 		color: '#4d4d4d',
 		fontSize: 7
 	});
 
 	skillsText.push({
 		text: 'Advanced',
-		absolutePosition: { x: 495, y: 368 },
+		absolutePosition: { x: 495, y: 392 },
 		color: '#4d4d4d',
 		fontSize: 7
 	});
@@ -146,6 +146,15 @@ export const exportPDF = () => {
 									},
 									{
 										text: 'https://github.com/osamkova',
+										margin: [8, 2, 0, 0]
+									}
+								],
+								margin: [0, 0, 0, 10]
+							},
+							{
+								columns: [
+									{
+										text: 'American resident since 2015',
 										margin: [8, 2, 0, 0]
 									}
 								],

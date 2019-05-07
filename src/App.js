@@ -50,6 +50,9 @@ class App extends Component {
                                 </div>
                                 <span className='contacts-cell-item'>https://github.com/osamkova</span>
                             </a>
+                            <div className='contacts-row'>
+                                <span className='contacts-cell-item'>American resident since 2015</span>
+                            </div>
                         </div>
                     </div>
                     <div className='right-col flex'>
