@@ -186,11 +186,44 @@ export const exportPDF = () => {
 							{
 								columns: [
 									{
+										text: 'AD/FIN',
+										style: 'company'
+									},
+									{
+										text: 'Aug 2019 - Oct 2019',
+										style: 'datePlace'
+									}
+								],
+								style: 'firstLine'
+							},
+							{
+								columns: [
+									{
+										text: 'Software Engineer',
+										style: 'position'
+									},
+									{
+										text: 'New York, NY',
+										style: 'datePlace'
+									}
+								],
+								style: 'secondLine'
+							},
+							{
+								text: 'Enhanced and built reusable React components. Maintained front-end architecture using React, Redux and Webpack.'
+							},
+							{
+								text: 'Technologies used: React/Redux, React Router, RxJS, Webpack',
+								style: 'cursive'
+							},
+							{
+								columns: [
+									{
 										text: 'Greystone & Co',
 										style: 'company'
 									},
 									{
-										text: 'Jul 2017 - Present',
+										text: 'Jul 2017 - Aug 2019',
 										style: 'datePlace'
 									}
 								],
