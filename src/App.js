@@ -83,8 +83,22 @@ class App extends Component {
                             <h4>Experience</h4>
                             <div className='experience-item'>
                                 <div className='experience-title'>
+                                    <span className='company-name'>AD/FIN</span>
+                                    <span className='date-place'>Aug 2019 - Oct 2019</span>
+                                </div>
+                                <div className='experience-title'>
+                                    <span className='position'>Software Engineer</span>
+                                    <span className='date-place'>New York, NY</span>
+                                </div>
+                                <div className='description'>
+                                    Enhanced and built reusable React components. Maintained front-end architecture using React, Redux and Webpack.
+                                    <p className='cursive'>Technologies used: React/Redux, React Router, RxJS, Webpack</p>
+                                </div>
+                            </div>
+                            <div className='experience-item'>
+                                <div className='experience-title'>
                                     <span className='company-name'>Greystone & Co</span>
-                                    <span className='date-place'>Jul 2017 - Present</span>
+                                    <span className='date-place'>Jul 2017 - Aug 2019</span>
                                 </div>
                                 <div className='experience-title'>
                                     <span className='position'>Software Engineer</span>
