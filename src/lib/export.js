@@ -62,7 +62,7 @@ export const exportPDF = () => {
 		});
 		skillsText.push({
 			text: item.label,
-			absolutePosition: { x: 360, y: y(getY(item)) + 205 },
+			absolutePosition: { x: 360, y: y(getY(item)) + 191 },
 			color: '#FFFFFF',
 			fontSize: 7
 		})
@@ -79,14 +79,14 @@ export const exportPDF = () => {
 
 	skillsText.push({
 		text: 'Knowledgeable',
-		absolutePosition: { x: 355, y: 392 },
+		absolutePosition: { x: 355, y: 378 },
 		color: '#4d4d4d',
 		fontSize: 7
 	});
 
 	skillsText.push({
 		text: 'Advanced',
-		absolutePosition: { x: 495, y: 392 },
+		absolutePosition: { x: 495, y: 378 },
 		color: '#4d4d4d',
 		fontSize: 7
 	});
@@ -137,15 +137,6 @@ export const exportPDF = () => {
 									{
 										text: 'oksasamkova@gmail.com',
 										width: 140,
-										margin: [8, 2, 0, 0]
-									},
-									{
-										image: 'gitHub',
-										width: 15,
-										alignment: 'left'
-									},
-									{
-										text: 'https://github.com/osamkova',
 										margin: [8, 2, 0, 0]
 									}
 								],
@@ -388,7 +379,7 @@ export const exportPDF = () => {
 			subheader: {
 				fontSize: 12,
 				bold: true,
-				margin: [0, 30, 0, 10]
+				margin: [0, 16, 0, 10]
 			},
 			datePlace: {
 				fontSize: 8,
@@ -397,7 +388,7 @@ export const exportPDF = () => {
 			},
 			cursive: {
 				italics: true,
-				margin: [0, 8, 0, 10]
+				margin: [0, 8, 0, 8]
 			},
 			company: {
 				bold: true,

@@ -44,15 +44,9 @@ class App extends Component {
                                 </div>
                                 <span className='contacts-cell-item' >oksasamkova@gmail.com</span>
                             </a>
-                            <a className='contacts-row link' href='https://github.com/osamkova'>
-                                <div className='icon-wrap'>
-                                    <span className='icon icon-github-brands'/>
-                                </div>
-                                <span className='contacts-cell-item'>https://github.com/osamkova</span>
-                            </a>
-                            <div className='contacts-row'>
-                                <span className='contacts-cell-item'>American resident since 2015</span>
-                            </div>
+                        </div>
+                        <div className='padding-top'>
+                            <span>American resident since 2015</span>
                         </div>
                     </div>
                     <div className='right-col flex'>
