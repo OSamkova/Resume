@@ -1,11 +1,11 @@
 self.__precacheManifest = [
   {
-    "revision": "769deeede0fb72c812a3",
-    "url": "/resume/static/css/main.04454544.chunk.css"
+    "revision": "bad76dcbe85eb3f61c31",
+    "url": "/resume/static/css/main.9bc57713.chunk.css"
   },
   {
-    "revision": "769deeede0fb72c812a3",
-    "url": "/resume/static/js/main.769deeed.chunk.js"
+    "revision": "bad76dcbe85eb3f61c31",
+    "url": "/resume/static/js/main.bad76dcb.chunk.js"
   },
   {
     "revision": "fd78f13f2eeb6b64bd90",
@@ -16,16 +16,16 @@ self.__precacheManifest = [
     "url": "/resume/static/js/2.66efa793.chunk.js"
   },
   {
-    "revision": "96e68ed9bef322cb34b50beced96b772",
-    "url": "/resume/static/media/home-solid.96e68ed9.svg"
+    "revision": "a611abe8cc267d7275819b1266b7d363",
+    "url": "/resume/static/media/envelope-solid.a611abe8.svg"
   },
   {
     "revision": "f6d132c2dc7dad47fd5ca24cd53ca2fd",
     "url": "/resume/static/media/github-brands.f6d132c2.svg"
   },
   {
-    "revision": "a611abe8cc267d7275819b1266b7d363",
-    "url": "/resume/static/media/envelope-solid.a611abe8.svg"
+    "revision": "96e68ed9bef322cb34b50beced96b772",
+    "url": "/resume/static/media/home-solid.96e68ed9.svg"
   },
   {
     "revision": "e534059b1646fa021869e87856199278",
@@ -36,7 +36,7 @@ self.__precacheManifest = [
     "url": "/resume/static/media/arrow-circle-down-solid.62a4e11b.svg"
   },
   {
-    "revision": "af26899568bc93300892d7e3821047ea",
+    "revision": "bc3655f9e7ba3588b2c5a26fab3769bd",
     "url": "/resume/index.html"
   }
 ];
